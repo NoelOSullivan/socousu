@@ -1,0 +1,58 @@
+.common-logo {
+    position: relative;
+}
+
+.central-logo-landscape {
+    height: 70vh;
+
+    @media screen and (max-height: 500px) {
+        height: 90vh;
+    }
+}
+
+.transition-zoom {
+    transition: all 100ms ease-in;
+}
+
+.transition-opacity {
+    transition: opacity 100ms ease-in;
+}
+
+.central-logo-landscape-zoom {
+    height: 80vh;   
+
+    @media screen and (max-height: 600px) {
+        height: 130vh;
+        margin-top: 30px;
+    }
+}
+
+.central-logo-portrait {
+    width: 90vw;   
+}
+
+.central-logo-portrait-zoom {
+    width: 100vw;   
+
+    margin-left: -5px;
+
+    @media screen and (max-width: 500px) {
+        width: 180vw;
+        margin-left: 8px;
+    }
+}
+
+.fit-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.place-hole {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hide {
+    opacity: 0;
+}

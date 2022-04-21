@@ -1,0 +1,5 @@
+<div (click)="toggleZoom()" class="common-logo" [ngClass]="manageLogoSize()" alt="logo">
+  <app-eye-viewer></app-eye-viewer>
+  <img src='../../../assets/images/logo-large-hole.png' class="fit-image place-hole"/>
+  <img src='../../../assets/images/logo-large.png' [ngClass]="manageLogoOpacity()" class="fit-image transition-opacity"/>
+</div>
