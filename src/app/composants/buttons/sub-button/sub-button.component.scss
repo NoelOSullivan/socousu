@@ -1,0 +1,66 @@
+
+.sub-button {
+    position: absolute;
+    width: 9%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 5px 2px #222);
+    transition: width 50ms linear;
+    z-index: 1;
+    filter: saturate(0);
+};
+
+.sub-button-selected {
+    width: 11%;
+    z-index: 2;
+    filter: saturate(100%);
+}
+
+.hide-sub-button {
+    display: none;
+}
+
+.haut {
+    top: 50px;
+    left: 27%;
+}
+
+.jupe {
+    top: 25px;
+    left: 35%;
+}
+
+.robe {
+    top: 15px;
+    left: 45%;
+}
+
+.pantalon {
+    top: 15px;
+    left: 55%;
+}
+
+.manteau {
+    top: 25px;
+    left: 64%;
+}
+
+.chapeau {
+    top: 50px;
+    left: 72%;
+}
+
+.cuisine {
+    top: 35px;
+    left: 32%;
+}
+
+.salon {
+    top: 15px;
+    left: 50%;
+}
+
+.sdb {
+    top: 35px;
+    left: 70%;
+}

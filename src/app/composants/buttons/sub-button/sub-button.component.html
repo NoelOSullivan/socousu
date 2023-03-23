@@ -1,0 +1,5 @@
+<div (click)="changeSubRub()">
+    <!-- <img *ngIf="subRub !== mySubRub" src={{iconPath}} class='fit-image icon-image' />
+    <img *ngIf="subRub === mySubRub" src={{icon2Path}} class='fit-image icon-image' /> -->
+    <img src={{icon2Path}} class='fit-image icon-image' [ngClass]="subButtonStyle$ | async" />
+</div>

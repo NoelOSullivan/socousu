@@ -1,5 +1,6 @@
 .common-logo {
     position: relative;
+    // margin-top: 50px;
 }
 
 .central-logo-landscape {
@@ -17,6 +18,7 @@
 .transition-opacity {
     transition: opacity 100ms ease-in;
 }
+  
 
 .central-logo-landscape-zoom {
     height: 80vh;   
@@ -28,19 +30,41 @@
 }
 
 .central-logo-portrait {
-    width: 90vw;   
+    // width: 90vw;  
+    transform: scale(0.9);
+    animation: eyebounceClose 200ms forwards ; 
+    animation-timing-function: ease-in;
 }
 
 .central-logo-portrait-zoom {
-    width: 100vw;   
-
-    margin-left: -5px;
+    // width: 100vw;   
+    // animation: eyebounce 1s;
+    // margin-left: -5px;
 
     @media screen and (max-width: 500px) {
-        width: 180vw;
-        margin-left: 8px;
+        animation: eyebounce 200ms forwards ;
+        animation-timing-function: ease-in;
+        // width: 180vw;
+        
+        // margin-left: 8px;
+
+        
     }
 }
+
+@keyframes eyebounce {
+    0% { transform: scale(0.9);}
+    80% { transform: scale(2.1); }
+    85% { transform: scale(2); }
+    100% { transform: scale(1.85); margin-left: (8px);}
+  }
+
+  @keyframes eyebounceClose {
+    0% { transform: scale(1.85); }
+    80% { transform: scale(0.7); }
+    85% { transform: scale(0.85); }
+    100% { transform: scale(0.9); }
+  }
 
 .fit-image {
     max-width: 100%;
@@ -55,4 +79,12 @@
 
 .hide {
     opacity: 0;
+}
+
+.hide-image-controls {
+    display: none;
+}
+
+.show-image-controls {
+    display: block;
 }

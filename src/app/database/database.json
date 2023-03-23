@@ -1,0 +1,139 @@
+{
+  "rubriques": {
+    "rub1": {
+      "subRub1": [{
+          "description": "T-Shirt made from 100% Pyrenees Silk. Dyed with the blood of only the best young lambs.",
+          "imageSrc": "fringues/hauts/tshirt_1_1.png",
+          "state":"Vendu"
+        },
+        {
+          "description": "I particularly like the green sash which is very quirky.",
+          "imageSrc": "fringues/hauts/tshirt_1_2.png",
+          "state":"Vendu"
+        },
+        {
+          "description": "Legend : Photo 3",
+          "imageSrc": "fringues/hauts/tunique_1_1.png",
+          "prix":"75€"
+        },
+        {
+          "description": "Legend : Photo 9",
+          "imageSrc": "fringues/hauts/tunique_1_2.png",
+          "prix":"75€"
+        },
+        {
+          "description": "Legend : Photo 4",
+          "imageSrc": "fringues/hauts/pull1.png"
+        },
+        {
+          "description": "Legend : Photo 5",
+          "imageSrc": "fringues/hauts/pull1-2.png"
+        },
+        {
+          "description": "Legend : Photo 6",
+          "imageSrc": "fringues/hauts/pull2.png"
+        },
+        {
+          "description": "Legend : Photo 7",
+          "imageSrc": "fringues/hauts/pull2-2.png"
+        },
+        {
+          "description": "Legend : Photo 8",
+          "imageSrc": "fringues/hauts/pull2-3.png"
+        }
+      ],
+      "subRub2": [{
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/jupes/jupe1.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/jupes/jupe1-2.png"
+        }
+      ],
+      "subRub3": [{
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/robes/robe1.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/robes/robe1-2.png"
+        }
+      ],
+      "subRub4": [{
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/pantalons/pantalon1.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/pantalons/pantalon1-2.png"
+        }
+      ],
+      "subRub5": [{
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/manteau1.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/manteau1-2.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/manteau2.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/manteau2-2.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/manteau2-3.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/veste1.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/veste1-2.png"
+        },
+        {
+          "description": "Legend : Photo x",
+          "imageSrc": "fringues/manteaux/veste1-3.png"
+        }
+      ],
+      "subRub6": [{
+          "description": "Legend : Photo 1",
+          "imageSrc": "fringues/tete/gavroche_1_1.png"
+        },
+        {
+          "description": "Legend : Photo 2",
+          "imageSrc": "fringues/tete/gavroche_1_2.png"
+        }
+      ]
+    },
+    "rub2": {
+      "subRub1": [{
+        "description": "Legend : Photo 1",
+        "imageSrc": "maison/cuisine/trousse_1_1.png"
+      }],
+      "subRub2": [{
+        "description": "Legend : Photo 1",
+        "imageSrc": "maison/salon/trousse_1_1.png"
+      }],
+      "subRub3": [{
+          "description": "Legend : Photo 1",
+          "imageSrc": "maison/sdb/trousse_1_1.png"
+        },
+        {
+          "description": "Legend : Photo 1",
+          "imageSrc": "maison/sdb/trousse_1_2.png"
+        },
+        {
+          "description": "Legend : Photo 1",
+          "imageSrc": "maison/sdb/trousse_1_3.png"
+        }
+      ]
+    }
+  }
+}

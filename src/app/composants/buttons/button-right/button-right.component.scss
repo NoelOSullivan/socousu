@@ -1,0 +1,14 @@
+.button-right {
+    position: absolute;
+    bottom: 4%;
+    right: calc(50% - 30px);
+    transform: translate(100%, 0);
+    width: 11%;
+    max-width: 100px;
+    z-index: 10;
+    filter: drop-shadow(0px 5px 2px #222);
+}
+
+.button-disabled {
+    filter: saturate(0);
+}

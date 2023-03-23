@@ -1,4 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { ViewerService } from 'src/app/services/services';
+import { Subscription } from 'rxjs';
+import dataSet from '../../database/database.json';
 
 @Component({
   selector: 'app-central-logo',
@@ -7,10 +10,14 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class CentralLogoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewerservice: ViewerService) { }
 
   screenOrientation: string;
-  zoomed: boolean = false;
+  rubrique: number;
+  subRub: number;
+  viewerOpen: boolean = false;
+  manageViewerSubscription: Subscription;
+  diapoData: [];
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -27,33 +34,63 @@ export class CentralLogoComponent implements OnInit {
 
   ngOnInit(): void {
     this.manageResize();
+    console.log("dataSet", dataSet);
+  }
+  
+  ngAfterViewInit(): void {
+    this.manageViewerSubscription = this.viewerservice.currentViewerState.subscribe(rubrique => {
+      if(this.rubrique !== rubrique) {
+        this.rubrique = rubrique;
+        this.toggleViewer();
+        if(this.rubrique) {
+          this.subRub = 1;
+          this.initialiseSubRubrique();
+        }
+      }
+    });
   }
 
-  toggleZoom(): void {
-    this.zoomed = !this.zoomed;
+  initialiseSubRubrique(): void {
+    this.diapoData = dataSet.rubriques["rub" + this.rubrique]["subRub" + this.subRub];
+  }
+
+  toggleViewer(): void {
+    this.viewerOpen = !this.viewerOpen;
+  }
+
+  changeSubRubEvent(event) {
+    this.subRub = event;
+    this.diapoData = dataSet.rubriques["rub" + this.rubrique]["subRub" + this.subRub];
   }
 
   manageLogoSize(): string {
     if (this.screenOrientation === "LANDSCAPE") {
-      if (this.zoomed) {
+      if (this.viewerOpen) {
         return 'central-logo-landscape-zoom transition-zoom'
       } else {
         return 'central-logo-landscape transition-zoom';
       }
     } else {
-      if (this.zoomed) {
-        return 'central-logo-portrait-zoom transition-zoom';
+      if (this.viewerOpen) {
+        return 'central-logo-portrait-zoom';
       } else {
-        return 'central-logo-portrait transition-zoom';
+        // console.log("XXX");
+        return 'central-logo-portrait';
       }
     }
-
-
   }
 
   manageLogoOpacity(): string {
-    if(this.zoomed) {
+    if (this.viewerOpen) {
       return 'hide';
+    }
+  }
+
+  manageImageControls(): string {
+    if (this.viewerOpen) {
+      return 'show-image-controls';
+    } else {
+      return 'hide-image-controls';
     }
   }
 

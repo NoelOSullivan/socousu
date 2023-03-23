@@ -1,0 +1,9 @@
+.item-position {
+    top: 30px;
+    left: 0px;
+    @media screen and (max-width: 500px) {
+        top: 15vh;
+        width: 35%;
+        margin-left: 33%;
+    }
+}

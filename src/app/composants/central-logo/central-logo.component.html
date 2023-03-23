@@ -1,5 +1,22 @@
-<div (click)="toggleZoom()" class="common-logo" [ngClass]="manageLogoSize()" alt="logo">
-  <app-eye-viewer></app-eye-viewer>
-  <img src='../../../assets/images/logo-large-hole.png' class="fit-image place-hole"/>
-  <img src='../../../assets/images/logo-large.png' [ngClass]="manageLogoOpacity()" class="fit-image transition-opacity"/>
+<div class="common-logo" [ngClass]="manageLogoSize()" alt="logo">
+  <app-eye-viewer [diapoData]="this.diapoData" [selectedRubrique]="rubrique"></app-eye-viewer>
+  <img src='../../../assets/images/logo-large-hole.png' class="fit-image place-hole" />
+  <img src='../../../assets/images/logo-large.png' [ngClass]="manageLogoOpacity()"
+    class="fit-image transition-opacity" />
+
+  <div [ngClass]="manageImageControls()">
+    <app-button-left></app-button-left>
+    <app-button-right></app-button-right>
+    <app-button-close></app-button-close>
+
+    <app-sub-button [iconName]="'haut'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="1" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'jupe'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="2" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'robe'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="3" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'pantalon'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="4" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'manteau'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="5" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'chapeau'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="1" [mySubRub]="6" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'cuisine'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="2" [mySubRub]="1" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'salon'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="2" [mySubRub]="2" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+    <app-sub-button [iconName]="'sdb'" [selectedRubrique]="rubrique" [subRub]="subRub" [myRubrique]="2" [mySubRub]="3" (changeSubRubEvent)="changeSubRubEvent($event)"></app-sub-button>
+  </div>
 </div>

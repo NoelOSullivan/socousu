@@ -1,3 +1,12 @@
 <div class="hide-behind-logo">
-  <img src='../../../../../assets/images/photos/sacs/tresgrandsac.JPG' class='fit-photo' />
+  <div class="diapo-viewport">
+    <div class="diapo-holder" [ngStyle]="{'left': diapoLeftPos$ | async, 'width': diapoHolderWidth$ | async}"   
+    [ngClass]="{'animate-scroll': (animateScroll$ | async) === true }">
+      <div class="diapo" *ngFor="let diapo of diapoInfo">
+        <img src="{{'../../../../../assets/images/photos/' + diapo.imageSrc}}" class='fit-photo' />
+      </div>
+    </div>
+  </div>
 </div>
+
+<div *ngIf="selectedRubrique" class="description">{{description}}</div>
